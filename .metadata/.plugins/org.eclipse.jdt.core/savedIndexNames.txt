@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+C:\Users\yanag\Documents\EclipseWorkSpace\POITest\.metadata\.plugins\org.eclipse.jdt.core
+2453377837.index
+1734174343.index
+2686500743.index
+1895265994.index
+341052420.index
+1971876254.index
+857264089.index
+1319543981.index
+3109216051.index

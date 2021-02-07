@@ -1,0 +1,33 @@
+package Sample;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class POISample {
+	public static void main(String[] args) throws IOException {
+		Workbook workbook = null;
+		OutputStream os = null;
+		String outputFilePath = "./src/main/resouces/testfile.xlsx";
+		try {
+			os = new FileOutputStream(outputFilePath);
+			workbook = new XSSFWorkbook();
+			
+			// シート作成
+			workbook.createSheet("シートA");
+			// エクセルファイルを出力
+			workbook.write(os);
+			
+		} finally {
+			if(os != null) {
+				os.close();
+			}
+			if(workbook != null) {
+				workbook.close();
+			}
+		}
+	}
+}
