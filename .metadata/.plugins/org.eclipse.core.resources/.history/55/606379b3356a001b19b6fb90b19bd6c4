@@ -1,0 +1,25 @@
+package OpenCSV;
+
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.opencsv.CSVWriter;
+
+public class JavaCsvSample {
+	public static void main(String[] augs) throws IOException {
+		FileWriter fileWriter = null;
+		CSVWriter csvWriter = null;
+		try {
+			fileWriter = new FileWriter("tersfile.csv");
+			csvWriter = new CSVWriter(fileWriter);
+			// ÉwÉbÉ_Å[
+			List<String> header = new ArrayList<String>();
+			header.add("MEMBER_NO");
+			header.add("MEMBER_NAME");
+			csvWriter.writeNext(header.toArray(new String[header.size()]));
+		}
+	}
+}
