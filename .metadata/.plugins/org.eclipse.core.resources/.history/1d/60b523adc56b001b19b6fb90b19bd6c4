@@ -1,0 +1,16 @@
+package POI;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Workbook;
+
+public class EditExcelSheet {
+	// エクセルファイルを置いているフォルダ
+	static final String INPUT_DIR = "./";
+	public static void main(String[] args)throws IOException {
+		// 変更するエクセルファイルを指定
+		FileInputStream in = new FileInputStream(INPUT_DIR + "test.xlsx");
+		Workbook wb = null;
+	}
+}
