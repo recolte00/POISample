@@ -1,0 +1,32 @@
+package POI;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+
+public class CalendarSample {
+	public static void main(String[] args) {
+		Workbook wb = new HSSFWorkbook();
+		Sheet sheet = wb.createSheet();
+		
+		sheet.setColumnWidth(0, 4096);
+		sheet.setColumnWidth(1, 4096);
+		
+		Row row1 = sheet.createRow(1);
+		Row row2 = sheet.createRow(2);
+		
+		Cell cell1_0 = row1.createCell(0);
+		Cell cell1_1 = row1.createCell(1);
+		Cell cell2_0 = row1.createCell(0);
+		Cell cell2_1 = row1.createCell(1);
+		
+		CreationHelper createHelper = wb.getCreationHelper();
+		CellSytle cellStyle = wb.createCellStyle();
+		short style = createHelper.createDataFormat().getFormat("yyyy/mm/dd h:mm");
+		CellStyle.setDataFormat(style);
+	}
+}

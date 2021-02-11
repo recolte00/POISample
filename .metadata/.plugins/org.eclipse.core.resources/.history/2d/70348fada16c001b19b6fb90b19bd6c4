@@ -1,0 +1,17 @@
+package POI;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class EditDateSample {
+	public static void main(String[] args) {
+		try(Workbook book = WorkbookFactory.create(EditDateSample.class.getResourceAsStream("testfile.xlsx"));
+					OutputStream out = new FileOutputStream("testfile.xlsx");){
+			
+			
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package POI;
+
+import java.io.File;
+
+public class MainEdit {
+	public static void main(String[] args) {
+		String sheetName = "sheet1";
+		try {
+			// 使用例１：物理ファイルをtemplateにする場合
+			File template = new File("testfile.xlsx");
+			WorkbookWrapper wr = new WorkbookWrapper(template);
+			
+			// 使用例２：メモリ上のWorkbookをtemplateにする場合
+//			XSSFWorkbook wb = new XSSFWorkbook();
+//			wb.createSheet(sheetName);
+//			WorkbookWrapper wr = new WorkbookWrapper(wb);
+
+			// Write xmls
+		}
+	}
+}
