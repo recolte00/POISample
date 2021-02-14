@@ -62,13 +62,13 @@ public class MainEdit {
 		return dataDtos;
 	}
 	
-	public static Date toDate(String str, String format){
+	public static String toDate(String str, String format)throws ParseException{
 		SimpleDateFormat df = new SimpleDateFormat(format);
 		df.setLenient(false);
-		Date date= new Date();
+		String nowMonth= "";
 		try {
-			date = df.parse(str);
-		}catch(Exception e) {
+			nowMonth = df.parse(str);
+		}catch(java.text.ParseException e) {
 			e.printStackTrace();
 		}
 		return date;
